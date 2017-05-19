@@ -1,0 +1,525 @@
+.header-top{
+	width: 100%;
+	height: 40px;
+	background: #444;
+}
+.header-top main{
+    max-width: 976px;	
+    /* background: #a8a8aa; */
+	margin: 0 auto;
+	font-size: 12px;
+	line-height: 40px;
+	text-align: right; 
+	color: #FFF;
+}
+ header nav{
+	width: 100%;
+	height: 44px;
+	background: black;
+	opacity: 0.8;
+}
+header nav main{
+    max-width: 1024px;
+    height: 100%;
+   /*  background: red; */
+	margin: 0 auto;
+	padding: 0px 12px ;
+	/* text-align: justify; */
+}
+
+header nav main ul{
+	height: 44px;
+	text-align: justify;
+	line-height: 44px;
+	color: #fff;
+	/* background: red; */
+	margin: 0 auto;
+} 
+header nav main ul:after{
+	content: "";
+	display: inline-block;
+	height: 0;
+	width: 100%;
+ } 
+header nav main ul li{
+ 	display: inline-block;
+ 	font-size: 12px;
+} 
+header nav main ul li:hover{
+	color: rgba(255, 255, 255, 0.5);
+}
+.banner{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.banner ul{
+	width: 400%;
+	transition: all 1s;
+}
+.banner ul li{
+	float: left;
+}
+.banner ul li img{
+	width: 100%;
+	height: 100%;
+}
+.banner-left{
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 999;
+}
+.right{
+	width: 10%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 999;
+}
+.lunbodian1{
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 20px;
+	margin: auto;
+	border-radius: 50%;
+	background: #EBEBEB;
+	line-height: 64px;
+	font-size: 30px;
+	text-align: center;
+	opacity: 1;
+}
+.lunbodian2{
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right:  20px;
+	margin: auto;
+	border-radius: 50%;
+	background: rgba(136,136,136,0.12);
+	line-height: 64px;
+	font-size: 30px;
+	text-align: center;
+	opacity: 1;
+	color: rgba(0, 0, 0, 0.6);
+}
+.lunbodian1 a:hover{
+	opacity: 1;
+}
+.lunbodian2 a:hover{
+	opacity: 1;
+}
+.xian{
+	width: 180px;
+	height: 22px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 410px;
+    margin: 0 auto;
+    line-height: 22px;
+}
+.xian1{
+	width: 50px;
+    height: 3px;
+    background: #DCDCDC;
+    margin: 10px 5px;
+    float: left;
+}
+.xian1.xian2{
+	background: #808080;
+}
+.banner-left:hover .lunbodian1{
+    background: #555555;
+}
+.right:hover .lunbodian2{
+    background: #555555;
+}
+.content{
+	width: 100%;
+	overflow: hidden;
+	/* background: red; */
+}
+.content-img{
+	width: 25%;
+	height: 200px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    float: left;
+} 
+.content-img:nth-child(1){
+     background-image: url('../image/apple4.jpg');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.content-img:nth-child(2){
+     background-image: url('../image/apple3.jpg');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.content-img:nth-child(3){
+     background-image: url('../image/apple2.jpg');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.content-img:nth-child(4){
+    border-right: 0px solid #fff;
+    background-image: url('../image/apple1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner{
+	/* background-image: url('../image/hero_medium.jpg'); */
+    /* background-position: center center; */
+}
+.bottom{
+	width: 100%;
+	overflow: hidden;
+	background: #F2F2F2;
+	padding-top: 7px;
+}
+.footer-first{
+	width: 100%;
+   /*  background: yellow; */
+	font-size: 12px;
+	padding-bottom: 11px;
+	line-height: 50px;
+	border-bottom: 1px solid #888;
+    }
+.footer-second{
+	width: 100%;
+	overflow: hidden;
+	/* background: red; */
+	padding-top: 20px;
+}
+.second1{
+	width: 20%;
+	/* background: white;  */
+	float: left;	
+}
+.second2{
+	font-size: 14px;
+	color: #333333;
+	text-align: left;
+}
+.footer-second2{
+	width: 100%;
+	height: 12px;
+	font-size: 12px;
+	text-align: left;
+	float: left;
+	color: #555555;
+	line-height: 12px;
+	margin-bottom: 6px;
+}
+.second3{
+	margin-top: 18px;
+}
+.bottom-third{
+	width: 100%;
+	line-height: 17px;
+	font-size: 12px;
+	color: #888;
+	/* background: pink; */
+	padding: 34px 0px 7px;
+}
+.diyihang{
+	width: 100%;
+	font-size: 12px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #888;
+	margin-bottom: 7px;
+}
+.dierhang{
+	margin-top: 3px;
+	overflow: hidden;
+}
+.dierhang-left{
+	width: 260px;
+	float: left;
+	overflow: hidden;
+	margin-right: 30px;
+}
+.dierhang-middle{
+	float: left;
+}
+.dierhang-right{
+	float: right;
+	line-height: 21px;
+}
+.message{
+	color:#555555 ;
+	float: left;
+	padding-right: 12px;
+	border-right: 1px solid #555555;
+	margin-right: 10px;
+}
+.last{
+    width: 100%;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.message a:hover{
+	border-bottom: 1px solid #555555;
+}
+.diyihang a:hover{
+	border-bottom: 1px solid #555555;
+}
+.footer-second2 a:hover{
+	border-bottom: 1px solid #555555;
+}
+
+    .footer-small-main{
+    	max-width: 100%;
+    	margin: 0 auto;
+    	padding: 20px 25px 0px;
+	   /*  padding-top: 20px; */
+	    /* background: blue; */
+    } 
+	.footer-small{
+		width: 100%;
+		/* background: green; */
+	}
+	.footer-small-second{
+		width: 100%;
+		padding-top: 20px;
+	}
+	.small-second1{
+		width: 100%;
+		margin: 0 auto;
+		/* background: red; */
+	}
+	.footer-small-second2 {
+	    width: 100%;
+	    height: 38px;
+	    /* background: yellow; */
+		/* padding: 10px 0px; */
+	     line-height: 38px; 
+	    border-bottom: 1px solid #555555;
+	}
+	.footer-small-second2-left{
+		font-size: 12px;
+		float: left;
+	}
+	.footer-small-second2-right{
+		font-size: 14px;
+		float: right;
+	}
+	.bottom-third-small div{
+		width: 100%;
+		/* margin: 0 auto; */
+		/* background: yellow; */
+		font-size: 12px;
+		color: #555555;
+		margin-top: 10px;
+	}
+	.bottom-third-small ul li{
+		float: left;
+		padding-right: 12px;
+		border-right: 1px solid #555555;
+		margin-right: 10px;
+	}
+	.samll-last{
+		width: 100%;
+		margin: 0 auto;
+		font-size: 12px;
+	}
+@media screen and (min-width: 1024px)
+{/* 大屏是有固定宽高 */
+	.header-top main{
+       max-width: 976px;
+	}
+    header nav main{
+       max-width: 1024px;
+    }
+    .content-img{
+	   width: 25%;
+     }
+   .content-img:nth-child(1){
+    background-image: url('../image/apple4.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	.content-img:nth-child(2){
+	     background-image: url('../image/apple3.jpg');
+	     background-position: center center;
+	     background-repeat: no-repeat;
+	     background-size: cover;
+	}
+	.content-img:nth-child(3){
+	     background-image: url('../image/apple2.jpg');
+	     background-position: center center;
+	     background-repeat: no-repeat;
+	     background-size: cover;
+	}
+	.content-img:nth-child(4){
+	    border-right: 0px solid #fff;
+	    background-image: url('../image/apple1.jpg');
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	.large-content{
+    	display: block;
+    } 
+    .middle-content{
+    	display: none;
+    } 
+    .small-content{
+    	display: none;
+    } 
+    .small-bottom{
+       display: none;
+    }
+    .footer-main{
+    	max-width: 980px;
+    	margin: 0 auto;
+	    padding-top: 20px;
+	    /* background: blue; */
+    }  
+}
+
+/* 小于1024时 */
+@media screen and (max-width: 1024px)/* 小屏时通过变padding调两边间距 */{
+	.header-top main{
+        padding: 0px 24px;
+	}
+	header nav main{
+	    padding: 0px 22px;
+	}
+    .content-img{
+	    width: 50%;
+    }
+   .content-img:nth-child(1){
+    background-image: url('../image/middleapple4.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	.content-img:nth-child(2){
+	     background-image: url('../image/apple3_medium.jpg');
+	     background-position: center center;
+	     background-repeat: no-repeat;
+	     background-size: cover;
+	}
+	.content-img:nth-child(3){
+	     background-image: url('../image/apple2_medium.jpg');
+	     background-position: center center;
+	     background-repeat: no-repeat;
+	     background-size: cover;
+	}
+	.content-img:nth-child(4){
+	    border-right: 0px solid #fff;
+	    background-image: url('../image/apple1_medium.jpg');
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}  
+    .large-content{
+    	display: none;
+    } 
+    .middle-content{
+    	display: block;
+    } 
+    .small-content{
+    	display: none;
+    } 
+}
+/* 屏幕在1024和768之间 */
+@media screen and (max-width: 1024px) and (min-width: 768px){
+    .large-bottom{	
+        padding: 0px 20px;
+    }
+    .small-bottom{
+    	display: none;
+    }
+}
+
+/* 屏幕最小值为768时 */
+@media screen and (min-width: 768px){
+	header nav main .max-navmain{
+		display: block;
+	}
+	header nav main .min-navmain{
+		display: none;
+	}
+}
+
+/* 屏幕最大值为768时 */
+@media screen and (max-width: 768px){
+	header nav main .max-navmain{
+		display: none;
+	}
+	header nav main .min-navmain{
+		display: block;
+	}
+	.content-img{
+	width: 100%;
+     }
+   .content-img:nth-child(1){
+    background-image: url('../image/apple_small.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	.content-img:nth-child(2){
+	     background-image: url('../image/apple3_small.jpg');
+	     background-position: center center;
+	     background-repeat: no-repeat;
+	     background-size: cover;
+	}
+	.content-img:nth-child(3){
+	     background-image: url('../image/apple2_small.jpg');
+	     background-position: center center;
+	     background-repeat: no-repeat;
+	     background-size: cover;
+	}
+	.content-img:nth-child(4){
+	    border-right: 0px solid #fff;
+	    background-image: url('../image/apple1_small.jpg');
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+    .large-content{
+    	display: none;
+    } 
+    .middle-content{
+    	display: none;
+    } 
+    .small-content{
+    	display: block;
+    }
+	.banner{
+    	background-image: url('../image/hero_small.jpg');
+	    background-position: center center;
+    }
+    .large-bottom{
+        display: none;
+    }
+    .small-bottom{
+        display: block;
+        padding: 0px 10px;
+    }
+    .footer-small{
+    	font-size: 12px;
+    }
+    /* 底部部分 */
+    
+}

@@ -1,0 +1,215 @@
+/* 问题页 */
+
+	.wenti-list{
+		width: 100%;
+		overflow: hidden;
+		/* background: yellow; */
+	}
+	.wenti1{
+		width: 100%;
+		overflow: hidden;
+		padding-left: 0.2rem;
+		padding-top: 0.3rem;
+		font-size: 0.24rem;
+	}
+
+	.gang{
+		width: 0.04rem;
+		height: 0.2rem;
+		background: #01b5ff;
+		float: left;
+		margin-left: -0.15rem;
+		margin-top: 0.07rem;
+		overflow: hidden;
+	}
+	.wenti1-title{
+		font-size: 0.26rem;
+		color: #333;
+		margin-bottom: 0.14rem;
+
+	}
+	.fuhao{
+		width: 0.25rem;
+		height: 0.25rem;
+		background-image: url('../img/hot_01.png');
+		background-size: 100%;
+		float: left;
+		margin-left: -0.25rem;
+		margin-top: 0.06rem;
+
+	}
+	.wenti1-daan1{
+		width: 5.9rem;
+		color: #666;
+		margin-top: -0.02rem;
+		line-height: 0.36rem;
+		text-align: left;
+		font-size: 0.2rem;
+	}
+	.wenti1-daan{
+		width: 5.9rem;
+		color: #666;
+		margin-top: -0.02rem;
+		line-height: 0.36rem;
+		text-align: left;
+		font-size: 0.2rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.dianji{
+		width: 100%;
+	    color: #ff9300;
+	    text-align: center;
+	    margin-bottom: 0.2rem;
+	    margin: 0.3rem auto;
+	    font-size: 0.27rem;
+	    line-height:0;
+	}
+	.hengxian{
+		width: 100%;
+		border-bottom: 1px solid #b8b8b8;
+	}
+
+
+/* 详细页 */
+  /* 导航 */
+	.shi-title{
+	 	width: 100%;
+	 	height: 0.62rem;
+	 	line-height: 0.62rem;
+	 	font-size: 0.22rem;
+	 	font-weight: bold;
+	 	color: #494747;
+	 	line-height: 0.7rem;
+	 	overflow: hidden;
+	 }
+
+	.shi-title a:nth-child(1){
+	 	float: left;
+	 	margin-right: 0.14rem;
+	 }
+    .shi-title span{
+      	width: 0.16rem;
+      	height: 0.2rem;
+		text-align: center;
+		float: left;
+      }
+    .shi-title a.hot-wenti{
+	 	float: left;
+	 	margin: 0 0.14rem;
+	 }
+	.shi-title a.duoyu{
+		width: 1rem;
+		font-size: 0.22rem;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin: 0 0.14rem;
+		float: left;
+	 }
+	.details{
+		padding: 0 0.2rem;
+		margin-top: 0.1rem;
+	}
+
+
+  /* 内容部分 */
+  .que-content{
+  	width: 100%;
+  	padding: 0 0.2rem;
+  	background: #fff;
+  	overflow: hidden;
+  }
+
+  .q-contents{
+  	 width: 100%;
+  	 color: #666;
+  	 line-height: 0.36rem;
+  	 font-size: 0.24rem;
+  	 border-bottom: 1px dashed #b8b8b8;
+  	 padding-bottom: 0.2rem;
+  }
+  .pimg{
+  	width: 100%;
+  	height: 4.44rem;
+  }
+
+  .fenxiang{
+  	width: 100%;
+  	height: 1.4rem;
+  	padding: 0.2rem 0;
+  	position: relative;
+  }
+  .tubiaos{
+  	width: 100%;
+  	height: 1rem;
+  	margin: 0.1rem 0;
+  	float: left;
+  }
+  .tubiaos a{
+  	float: left;
+  	width: 0.7rem;
+  	height: 0.7rem;
+  	margin-right: 0.78rem;
+  	margin-top: 0.08rem;
+  }
+  .tubiaos a:nth-child(1){
+	background-image: url('../img/kj.png');
+	background-size: 100%;
+  }
+  .tubiaos a:nth-child(2){
+	background-image: url('../img/wb.png');
+	background-size: 100%;
+  }
+  .tubiaos a:nth-child(3){
+	background-image: url('../img/tx.png');
+	background-size: 100%;
+  }
+  .tubiaos a:nth-child(4){
+	background-image: url('../img/wx.png');
+	background-size: 100%;
+  }
+  .tubiaos a:nth-child(5){
+	background-image: url('../img/qq (1).png');
+	background-size: 100%;
+	margin-right: 0;
+  }
+  .ly-post{
+  	width: 110%;
+  	height: 1.6rem;
+  	margin-left: -0.24rem;
+  	overflow: hidden;
+  	background: #f5f6fa;
+
+  }
+  .shang{
+  	font-size: 0.26rem;
+  	width: 100%;
+  	height: 0.4rem;
+  	line-height: 0.4rem;
+	margin-top: 0.3rem;
+	color: #000;
+	padding-left: 0.14rem;
+  }
+  .s{
+  	margin-left: 0.1rem;
+  	width: 5.4rem;
+  	overflow: hidden;
+  	white-space: nowrap;
+  	text-overflow: ellipsis;
+  }
+  .xiangguangwenti{
+  	width: 100%;
+  	height: 4rem;
+  }
+  .xiangguangwenti ul{
+  	width: 100%;
+  	height: 100%;
+  }
+  .xiangguangwenti ul li{
+  	width: 100%;
+  	height: 0.6rem;
+  	margin-left: 0;
+  }

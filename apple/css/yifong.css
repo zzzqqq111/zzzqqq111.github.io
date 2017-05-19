@@ -1,0 +1,19 @@
+/* 头部 */
+   .header-main{
+       width: 100%;
+       height: 0.9rem;
+       background: -webkit-linear-gradient(top ,rgba(0, 0, 0, 0.7) ,rgba(0, 0, 0, 0));
+   }
+/* 结束 */
+
+
+/* .box{
+	width: 100%;
+	height: 2.68rem;
+	background: red;
+}
+.box ul{
+	width: 20%;
+	height: ;
+}
+ */

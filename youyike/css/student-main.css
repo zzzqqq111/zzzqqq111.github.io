@@ -1,0 +1,27 @@
+.student ul li{
+	width: 100%;
+	height: 1.86rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.35rem;
+	border-bottom: 1px solid #b8b8b8;
+
+}
+
+.student-left{
+	width: 1.93rem;
+	overflow: hidden;
+	float: left; 
+}
+.student-left img{
+	width: 1.93rem;
+	height: 100%; 
+}
+
+.student-right{
+	width: 4.3rem;
+	height: 100%;
+	padding-left: 0.29rem;
+	padding-bottom: 0.18rem;
+	float: left;
+
+}

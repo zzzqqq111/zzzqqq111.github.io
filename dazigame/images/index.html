@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    @keyframes move{
+      0%{
+        transform:translateX(0);
+      }
+      25%{
+         transform:translateX(-30px);
+      }
+      50%{
+         transform:translateX(0px);
+      }
+      75%{
+         transform:translateX(30px);
+      }
+      100%{
+         transform:translateX(0);
+      }
+    }
+    @keyframes rotate{
+      0%{
+        transform:rotate(0deg);
+      }
+      100%{
+        transform:rotate(360deg);
+      }
+    }
+	  body{
+	    margin:0;
+      text-align:center;
+      line-height:30px;
+      color:#fff;
+      font-size: 24px;
+      font-family:"微软雅黑";
+      font-weight:bold;
+      text-shadow:0px 0px 5px #000;
+	  }
+    .bg{
+    	width:100%;height:100%;
+    	position:absolute;
+    	background-image:url(bg.png); 
+    	background-size:100% 100%;
+      overflow:hidden;
+    }
+    .startbox{
+    	width:710px;height:400px;
+    	position:absolute;
+      left:0;right:0;top:0;bottom:0;
+      margin:auto;
+      animation:move 3s linear infinite;
+    }
+    .top{
+      width:710px;height:250px;
+      background:url(logo.png) no-repeat center;
+    }
+    .bottom{
+      width:710px;height:150px;
+    }
+    .choose{
+    	width:340px;height:100px;
+    	float:left;
+    	margin-top:50px;
+    	margin-right: 30px;
+    	cursor:pointer;
+    	background:url(choose.png) no-repeat center;
+      transition:all 1s;
+    }
+    .choose:hover{
+      transform:scale(1.1);
+    }
+    .start{
+    	width:340px;height:100px;
+    	float:left;
+    	margin-top: 50px;
+    	cursor:pointer;
+    	background:url(start.png) no-repeat center;
+      transition:all 1s;
+    }
+    .start:hover{
+      transform:scale(1.1);
+    }
+    .show{
+      width:800px;height:65px;
+      margin:0 auto;
+      display:none;
+      position:relative;
+      z-index:1;
+    }
+    .scor{
+      width:195px;height:65px;
+      background:url(scor.png) no-repeat center;
+      float:left;
+    }
+    .life{
+      width:239px;height:65px;
+      background:url(life.png) no-repeat center;
+      float:left;
+      margin-left:30px;
+      position:relative;
+    }
+    .stop{
+      width:65px;height:65px;
+      background:url(stop.png) no-repeat center;
+      background-size:100%;
+      float:right;
+    }
+    .scorinner{
+      width:100px;height:30px;
+      margin-left:75px;
+      margin-top:25px;
+    }
+    .lifeinner{
+      width:165px;height:40px;
+      background:#a8753f;
+      position:absolute;
+      right:10px;top:16px;
+      z-index:-1;
+      border-radius:5px;
+      box-shadow:0 0 10px #000 inset;
+      background-image:url(progress.png);
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      transition:all 1s;
+    }
+    .mask,.mask2{
+      width:100%;height:100%;
+      background:rgba(0,0,0,0.5);
+      position: absolute;
+      left:0;top:0;
+      display:none;
+      z-index:99;
+    } 
+    .overbox{
+      width:484px;height:419px;
+      background:url(over.png) no-repeat center;
+      position: absolute;
+      left:0;right:0;top:0;bottom:0;
+      margin:auto;
+    }
+    .score{
+      width:100px;height:40px;
+      margin-left:250px;
+      margin-top:150px; 
+      line-height:40px;
+    }
+    .maxscore{
+      width:100px;height:40px;
+      margin-left:250px;
+      margin-top:5px;
+      line-height:40px;
+    }
+    .btns{
+      width:250px;height:93px;
+      margin:0 auto;
+      margin-top:30px;
+    }
+    .restart{
+      width:93px;height:93px;
+      background:url(restart.png);
+      float:left;
+      cursor:pointer;
+      transition:all 1s; 
+    }
+    .restart:hover{
+      transform:rotate(360deg);
+    }
+    .quit{
+      width:93px;height:93px;
+      background:url(quit.png);
+      float:right;
+      cursor:pointer;
+      background-size:100% 100%; 
+      transition:all 1s; 
+    }
+    .quit:hover{
+      transform:translateX(-30px);
+    }
+    .stopbox{
+      width:470px;height:220px;
+      background:url(stopbox.png);
+      position:absolute;
+      left:0;right:0;top:0;bottom:0;
+      margin:auto;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-around;
+    }
+    .continue{
+      width:93px;height:93px;
+      background:url(continue.png);
+      margin-bottom:30px;
+      cursor:pointer;
+      transition:all 1s; 
+    }
+    .continue:hover{
+      transform:scale(1.1);
+    }
+    .stop-restart{
+      width:93px;height:93px;
+      background:url(restart.png);
+      margin-bottom:30px;
+      cursor:pointer;  
+      transition:all 1s;
+    }
+    .stop-restart:hover{
+      transform:rotate(360deg);
+    }
+    .stop-quit{
+      width:93px;height:93px;
+      background:url(quit.png);
+      background-size:100% 100%;
+      margin-bottom:30px;
+      cursor:pointer; 
+      transition:all 1s; 
+    }
+    .stop-quit:hover{
+      transform:translateX(-30px);
+    }
+    .difficult{
+      width:839px;height:402px;
+      background:url(difficult.png) no-repeat;
+      position: absolute;
+      left:0;right:0;top:0;bottom:0;
+      margin:auto;
+      display:none;
+    }
+    .choosebox{
+      width:100%;height:93px;
+      margin-top:200px;
+      display:flex;
+      justify-content:space-around;
+    }
+    .choosebox div{
+      width:214px;height:93px;
+      cursor:pointer;
+      transition:all .5s;
+    }
+    .choosebox div:hover{
+      transform:scale(1.1);
+    }
+    .easy{
+      background:url(easy.png) no-repeat center;
+    }
+    .medium{
+      background:url(medium.png) no-repeat center;
+      box-shadow:0 0 5px red;
+    }
+    .hard{
+      background:url(hard.png) no-repeat center;
+    }
+    .back{
+      width:110px;height:110px;
+      background:url(quit.png);
+      margin:15px auto;
+      cursor:pointer;
+      transition:all 1s;
+    }
+    .back:hover{
+      transform:rotate(360deg);
+    }
+    .music{
+      width:50px;height:50px;
+      border-radius: 50%;
+      background:url(music.png) no-repeat center;
+      position: absolute;
+      right:100px;top:10px;
+      z-index:9999;
+      background-color:#FEC743;
+      border:3px solid #fff;
+      animation:rotate 3s linear infinite;
+      cursor:pointer;
+    }
+	</style>
+</head>
+<body>
+    <div class="music"></div>
+	  <div class="bg">
+         <div class="show">
+              <div class="scor">
+                 <div class="scorinner">0</div>
+              </div>
+              <div class="life">
+                 <div class="lifeinner"></div>
+              </div>
+              <div class="stop"></div>
+         </div>
+		    <div class="startbox">
+		 	     <div class="top"></div>
+		 	     <div class="bottom">
+		 	 	      <div class="choose"></div>
+		 	 	      <div class="start"></div>
+		 	     </div>
+		   </div>
+	</div>
+  <div class="mask">
+        <div class="overbox">
+             <div class="score">0</div>
+             <div class="maxscore">0</div>
+             <div class="btns">
+                 <div class="restart"></div>
+                 <div class="quit"></div>
+             </div>
+        </div>
+  </div>
+  <div class="mask2">
+       <div class="stopbox">
+           <div class="continue"></div>
+           <div class="stop-restart"></div>
+           <div class="stop-quit"></div>
+       </div>
+  </div>
+  <div class="difficult">
+      <div class="choosebox">
+          <div class="easy"></div>
+          <div class="medium"></div>
+          <div class="hard"></div>
+      </div>
+      <div class="back"></div>
+  </div>
+  <audio src="demo.mp3" autoplay></audio>
+</body>
+<script>
+  var start=document.querySelector(".start");
+  var startbox=document.querySelector(".startbox");
+  var bg=document.querySelector(".bg");
+  var show=document.querySelector(".show");
+  var scorinner=document.querySelector(".scorinner");
+  var lifeinner=document.querySelector(".lifeinner");
+  var mask=document.querySelector(".mask");
+  var mask2=document.querySelector(".mask2");
+  var score=document.querySelector(".score");
+  var maxscore=document.querySelector(".maxscore");
+  var restart=document.querySelector(".restart");
+  var quit=document.querySelector(".quit");
+  var stop=document.querySelector(".stop");
+  var continuebtn=document.querySelector(".continue");
+  var stoprestart=document.querySelector(".stop-restart"); 
+  var stopquit=document.querySelector(".stop-quit");
+  var choose=document.querySelector(".choose");
+  var difficult=document.querySelector(".difficult");
+  var choosebtn=document.querySelectorAll(".choosebox div");
+  var back=document.querySelector(".back");
+  var music=document.querySelector(".music");
+  var audio=document.querySelector("audio");
+  var t;
+  var life=5;
+  var count=3;
+  var defen=0;
+  var speed=5;
+  var data={};
+  var fanwei=window.innerWidth-130;
+  var height=window.innerHeight;
+  var bestscore=localStorage.score?localStorage.score:0;
+  var flag=true;    
+  
+  function init(){
+      defen=0;
+      scorinner.innerHTML=defen;
+      life=5;
+      speed=5;
+      lifeinner.style.backgroundSize="100% 100%";
+      for(i in data){
+          bg.removeChild(data[i].ele);  
+      }
+      data={};
+      mask.style.display="none";
+      mask2.style.display="none";
+  }
+  function create(){
+     var newdiv=document.createElement("div");
+     newdiv.style.cssText="width:130px;height:130px;position:absolute;";
+     do{
+     var rn=Math.floor(Math.random()*26+65);
+     var zm=String.fromCharCode(rn);
+     }while(data[zm])
+     newdiv.style.background="url("+zm+".png) no-repeat center";
+     do{
+     var rleft=Math.random()*fanwei;
+     }while(check(rleft))
+     newdiv.style.left=rleft+"px";
+     var rtop=-Math.random()*200;
+     newdiv.style.top=rtop+"px";
+     bg.appendChild(newdiv)
+     data[zm]={left:rleft,top:rtop,ele:newdiv};
+  }
+  function check(left){
+      for(var i in data){
+         if(data[i].left-130<left&&left<data[i].left+130){
+           return true;
+         } 
+      }
+  }
+  function move(){
+     for(var i in data){
+       var top=data[i].top;
+       top+=speed;
+       data[i].top=top;
+       data[i].ele.style.top=top+"px";
+      if(top>height){
+          life--;
+          var zhi=life*20+"%";
+          lifeinner.style.backgroundSize=zhi+" 100%";
+          if(life==0){
+            gameover()
+          }
+          bg.removeChild(data[i].ele);
+          delete data[i];  
+          create();
+       }
+     }
+  }
+  function gameover(){
+    clearInterval(t)
+    mask.style.display="block";
+    score.innerHTML=defen;
+    if(defen<=bestscore){
+       maxscore.innerHTML=bestscore; 
+    }else{
+       maxscore.innerHTML=defen;
+       localStorage.score=defen;
+       bestscore=defen;
+    }
+  }
+  function restarthandler(){
+    init()
+    document.onkeydown=keydownhandler;
+    for (var i = 0; i <count; i++){
+        create(); 
+    };
+    t=setInterval(move,50)
+  }
+  function quithandler(){
+     init();
+     show.style.display="none";
+     startbox.style.display="block";
+  } 
+  function keydownhandler(e){
+     var keycode=e.keyCode;
+     var zm=String.fromCharCode(keycode);
+     if(data[zm]){
+       bg.removeChild(data[zm].ele);
+       delete data[zm];
+       create();
+       defen++;
+       scorinner.innerHTML=defen;
+       if(defen%10==0){
+         speed++;
+       }
+     }
+  }  
+  function starthandler(){
+     startbox.style.display="none";
+     show.style.display="block";
+     for (var i = 0; i <count; i++) {
+        create(); 
+     };
+     t=setInterval(move,50);
+     document.onkeydown=keydownhandler;
+  } 
+  function stophandler(){
+     clearInterval(t);
+     document.onkeydown=null;
+     mask2.style.display="block";
+  }
+  function continuehander(){
+     t=setInterval(move,50);
+     document.onkeydown=keydownhandler;
+     mask2.style.display="none";
+  }
+  function choosehandler(){
+     startbox.style.display="none";
+     difficult.style.display="block";
+  }
+  function backhandler(){
+     startbox.style.display="block";
+     difficult.style.display="none";
+  }
+  function choosebtnhandler(){
+          for (var i = 0; i < choosebtn.length; i++) {
+             choosebtn[i].style.boxShadow="none";
+          }; 
+          this.style.boxShadow="0 0 5px red";
+          if(this.className=="easy"){
+            count=1;
+          }else if(this.className=="medium"){
+            count=3;
+          }else{
+            count=5;
+          }
+      } 
+  function musichandler(){
+     if(flag){
+     music.style.animationPlayState="paused";
+     audio.pause()
+     }else{
+     music.style.animationPlayState="running";
+     audio.play()
+     }
+     flag=!flag;
+  }           
+  start.onclick=starthandler;
+  stop.onclick=stophandler;
+  restart.onclick=restarthandler;
+  quit.onclick=quithandler;
+  stoprestart.onclick=restarthandler;
+  stopquit.onclick=quithandler;
+  continuebtn.onclick=continuehander;
+  choose.onclick=choosehandler;
+  back.onclick=backhandler;
+  for (var i = 0; i < choosebtn.length; i++) {
+   choosebtn[i].onclick=choosebtnhandler;
+  };
+  music.onclick=musichandler;
+</script>
+</html>

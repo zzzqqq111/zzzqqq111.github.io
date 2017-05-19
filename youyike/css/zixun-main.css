@@ -1,0 +1,85 @@
+.zixun-main{
+	width: 100%;
+	overflow: hidden;
+	/* background: red; */
+}
+
+
+.zixun-title1{
+	width: 100%;
+	text-align: left;
+	overflow: hidden;
+	font-size: 0.28rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-bottom: 0.22rem;
+}
+
+.media-con{
+	width: 100%;
+	height: 1.79rem;
+	border-bottom: 1px solid #b8b8b8;
+}
+
+.media-img{
+	width: 2.06rem;
+	height: 100%;
+	float: left;
+	position: relative;	
+}
+.floor{
+	width: 1.93rem;
+	height: 1.45rem;
+	background-image: url('../img/ui51.png');
+	background-size: cover;
+	float: right;
+}
+
+.cell{
+	width: 1.93rem;
+	height: 1.45rem;
+	top: 0.15rem;
+	left: 0;
+	position: absolute;
+}
+
+.descript{
+	width: 4.2rem;
+	height: 1.4rem;
+	font-size: 0.24rem;
+	color: #494747;
+	line-height: 0.36rem;
+	float: right;
+}
+.media-rem{
+	width: 100%;
+	height: 0.6rem;
+	border-bottom: 1px solid #b8b8b8;
+}
+.time{
+	width: 2.1rem;
+	float: left;
+	line-height: 0.6rem;
+	font-size: 0.2rem;
+	margin-top: -0.01rem;
+	color: #666;
+}
+.click{
+	width: 2.4rem;
+}
+.share{
+	width: 2rem;
+	float: right;
+}
+i{
+	display: inline-block;
+	width: 0.31rem;
+	height: 0.31rem;
+	margin-top: 0.15rem;
+	float: left;
+	margin-right: 0.05rem;
+	background-image: url('../img/media_icon.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

@@ -1,0 +1,103 @@
+
+.background{
+	width: 100%;
+	overflow: hidden;	
+	background: #eeeeee;
+}
+.head{
+	width: 100%;
+	height: 0.94rem;
+	background: #F7F7F8;
+	padding: 0.06rem 0rem;
+	font-size: 0.4rem;
+	text-align: center;
+	line-height: 0.94rem;
+	border-bottom: 1px solid #c8c8c8;
+}
+.back{
+	width: 13%;
+	height: 0.5rem;
+	border: 1px solid #c1c1c5;
+	line-height: 0.6rem;
+	float: left;
+	font-size: 12px;
+	margin:0.2rem;
+	line-height: 0.5rem;
+}
+.main{
+	width: 100%;
+	overflow: hidden;
+	/* background: yellow; */
+	margin-top: 0.2rem;
+}
+.hanzi{
+	width: 96%;
+    margin: 2% 2%;
+	font-size: 0.28rem;
+}
+.background1{
+	width: 100%;
+	overflow: hidden;
+	padding: 0.12rem 0rem;
+	/* background: red; */
+}
+.login,.regist{
+	width: 100%;
+	height: 0.82rem;
+	padding: 0.08rem 4% ;
+	border-bottom: 1px solid #909090;
+	background: white;
+}
+.font1{
+	width: 19%;
+	height: 0.48rem;
+	font-size: 14px;
+	text-align: left;
+	float: left;
+	line-height: 0.48rem;
+}
+.font2{
+	width: 50%;
+	text-align: center;
+}
+input{
+	width: 70%;
+	font-size: 18px;
+	text-align: left;
+	float: right;
+	color: #ECECEC;
+}
+
+.button{
+	width: 92%;
+	height: 1.04rem;
+	background: #DDDDDD;
+	margin: 0.1rem auto ;
+	text-align: center;
+	padding: 0rem 0rem;
+}
+.youhua{
+	width: 52px;
+	height: 52px;
+	background: white;
+	font-size: 18px;	
+	line-height: 1.04rem;
+	float: left;
+}
+.hua{
+	font-size:  18px;
+	line-height: 1.04rem;
+	float: left;
+	margin-left: 20%;
+} 
+
+.explain{
+	padding: 0.02rem 0rem;
+	width: 100%;
+	overflow: hidden;
+	font-size: 14px;
+	color: black;
+	text-align: center;
+}
+
+

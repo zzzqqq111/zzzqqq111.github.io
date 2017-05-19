@@ -1,0 +1,311 @@
+/* 头部 */
+	header{
+		width: 100%;
+		height: 0.89rem;
+		background: #007be3;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 1;
+	}
+	.daohang  li{
+	   width: 20%;
+	   height: 100%;
+	   font-size: 0.32rem;
+	   float: left;
+	   text-align: center;
+	   line-height: 0.89rem;
+	   color: #fff;
+	   font-family: "苹方";
+	}
+
+/* 内容部分 */
+.shizi-content{
+	width: 100%;
+	overflow: hidden;
+	padding: 0.1rem 0.24rem 0;
+	background: #F5F6FA;
+}
+
+.dao-title{
+	font-size: 0.22rem;
+	line-height: 0.62rem;
+	color: #494747;
+	text-align: left;
+	margin: 0 0.14rem;
+}
+
+.tea-content{
+	width: 100%;
+	background: white;
+	padding: 0.1rem 0.24rem 0;
+	font-size: 16px;
+	margin-top: 0.2rem;
+}
+
+.tab{
+	width: 100%;
+	height: 0.8rem;
+	border: 1px solid #01b5ff;
+	border-radius: 0.07rem;
+	margin-bottom: 0.2rem;
+}
+.fenlei{
+	width: 33.333%;
+	height: 100%;
+	text-align: center;
+	line-height: 0.8rem;
+	font-size: 0.28rem;
+	float: left;
+	position: relative;
+	color: #fff;
+}
+.sanjiao{
+	width: 0rem;
+	height: 0rem;
+	border: 0.2rem solid #fff;
+	border-top-color: #01b5ff;
+	position: absolute;
+	top: 0.76rem;
+	left: 50%;
+	margin-left: -0.1rem;
+}
+
+.tab-content,.neirong ul{
+	width: 100%;
+}
+
+.neirong ul li{
+	width: 100%;
+	height: 2.87rem;
+	padding: 0.2rem;
+	border-bottom: 1px solid #b8b8b8;
+    /* background: yellow; */
+}
+
+.neirong-left{
+	width: 2.3rem;
+	height: 2.3rem;
+	margin-top: 0.15rem;
+	border-radius: 0.08rem;
+	float: left; 
+}
+.neirong-left img{
+	width: 100%;
+	height: 100%;
+}
+.neirong-right{
+	width: 3.6rem;
+	height: 1.92rem;
+	float: right;
+	margin-top: 0.34rem;
+	overflow: hidden;
+}
+.part1-teacher{
+	width: 100%;
+	text-align: left;	
+}
+.teacher-name{
+	font-size: 0.26rem;
+	color: #111;
+	height: 0.3rem;
+	width: 100%;	
+	line-height: 0.3rem;
+}
+.line{
+	width: 3.6rem;
+	margin: 0.2rem 0;
+	border-bottom: 1px dashed #b8b8b8;
+}
+.position{
+	width: 100%;
+	height: 0.26rem;
+	font-size: 0.24rem;
+	color: #01b5ff;
+	line-height: 0.26rem;
+}
+
+.part2-teacher{
+	width: 3.03rem;
+	height: 0.3rem;
+	color: #666666;
+	font-size: 0.24rem;
+	float: left;
+	margin-top: 0.2rem;
+	line-height: 0.3rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+}
+.part3-teacher{
+	width: 1.5rem;
+	height: 0.24rem;
+	font-size: 0.24rem;
+	color: #ff9300;
+	line-height: 0.45rem;
+	margin: 0.1rem 0;
+	text-align: left;
+}
+
+.yemian{
+	width: 100%;
+	height: 0.8rem;
+	padding-top: 0.15rem;
+	margin-top: 0.2rem;
+}
+.yemian a:nth-child(1){
+	width: 0.5rem;
+	height: 0.5rem;
+	padding: 0.1rem;
+	float: left;
+	margin-left: 0.28rem;
+	margin-right: 0.15rem;
+	line-height: 0.3rem;
+	background-image: url('../img/s1.png');
+	background-size: 100%;
+}
+
+.yemian a:nth-child(2){
+	width: 1.48rem;
+	height: 0.5rem;
+	padding: 0.1rem;
+	float: left;
+	margin-right: 0.15rem;
+	line-height: 0.3rem;
+	background-image: url('../img/s2.png');
+	background-size: 100%;
+}
+.a1{
+	width: 1.4rem;
+	height: 0.5rem;
+	border-radius: 0.4rem;
+	font-size: 0.24rem;
+	text-align: center;
+	line-height: 0.3rem;
+	margin-right: 0.15rem;
+	padding: 0.1rem;
+	border: 1px solid #666;
+	float: left;
+	color: #000;
+}
+.yemian a:nth-child(4){
+	width: 1.48rem;
+	height: 0.5rem;
+	padding: 0.1rem;
+	float: left;
+	margin-right: 0.15rem;
+	line-height: 0.3rem;
+	background-image: url('../img/s3.png');
+	background-size: 100%;
+}
+.yemian a:nth-child(5){
+	width: 0.5rem;
+	height: 0.5rem;
+	padding: 0.1rem;
+	float: left;
+	margin-right: 0.15rem;
+	line-height: 0.3rem;
+	background-image: url('../img/s4.png');
+	background-size: 100%;
+}
+
+.banben{
+	width: 7.02rem;
+	height: 1.2rem;
+	font-size: 0.2rem;
+	text-align: center;	
+	margin: 0 auto;
+	padding-top: 0.18rem;
+}
+
+.scoll{
+	width: 100%;
+	height: 12.5rem;
+	overflow: scroll;
+	background: #F5F6FA;
+}
+/* 联系部分 */
+.contact{
+   width: 100%;
+   height: 0.9rem;
+   margin-top: 0.2rem;
+   background: #e7e7e7;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   z-index: 999;
+}
+.contact-list{
+	width: 100%;
+    height: 0.9rem;
+}
+
+.part1{
+	width: 30%;
+	height: 0.8rem;
+	float: left;
+	font-size: 0.24rem;
+	background: #e7e7e7;
+	line-height: 0.8rem;
+}
+
+.i{
+	width: 0.32rem;
+	height: 0.32rem;
+	background-image: url('../img/qq.png');
+	background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 0.27rem;
+    margin-top: 0.28rem;
+    float: left;
+}
+.i1{
+	width: 0.32rem;
+	height: 0.32rem;
+	background-image: url('../img/shouye6.png');
+	background-position: -1.6rem -5.3rem;
+	background-size: 2rem;
+    background-repeat: no-repeat;
+    margin-left: 0.27rem;
+    margin-top: 0.28rem;
+    float: left;
+}
+.zi{
+	font-size: 0.26rem;
+	float: left;
+	line-height: 0.9rem;
+	margin-left: 0.1rem;
+}
+
+
+.phone{
+	width: 40%;
+	height: 0.9rem;
+	margin-top: -0.1rem;
+}
+.contact-middle{
+    width: 40%;
+	height: 0.9rem;
+	border-radius: 0.08rem;
+	margin-top: -0.1rem;
+    background: #ff8d12;
+    text-align: center;
+    font-size: 0.24rem;
+    color: #fff;
+    float: left;
+    box-shadow: 0px 0px 0.15rem #ff8d12;
+}
+
+.i-middle{
+	width: 0.36rem;
+	height: 0.36rem;
+	background-image: url('../img/shouye6.png');
+	background-size: 2rem;
+	background-position: -1.6rem -4.78rem;
+    background-repeat: no-repeat;
+    margin-left: 0.7rem;
+    line-height: 0.9rem;
+    float: left;
+    margin-top: 0.28rem;
+}

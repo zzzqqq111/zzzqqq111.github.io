@@ -1,0 +1,59 @@
+/*
+* @Author: 小
+* @Date:   2017-04-17 09:13:12
+* @Last Modified by:   小
+* @Last Modified time: 2017-04-17 10:45:13
+*/
+		.allcourses{
+			width: 1200px;
+			background: red;
+			margin: 0 auto;
+			
+		}
+		.primary{
+			width: 1200px;
+			margin: 0 auto;
+			margin-top: 10px;
+			overflow: hidden;
+			background: white;
+			padding-top: 58px;
+			box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+			display: none;
+			position: relative;
+			z-index: 999;
+		}
+		.yinianji{
+			width: 16.6667%;
+			overflow: hidden;
+			height: 351px;
+			text-align: center;
+			font-size: 30px;
+			color: #34933b;
+			float: left;
+
+		}
+		.yinianji1{
+			width: 33.333%;
+		}
+		.nianji{
+			margin-left: -5px;
+			color: #000;
+			line-height: 65px;
+		}
+		.nianji1{
+			width: 33.33%;
+			margin-left: -5px;
+			color: #000;
+			line-height: 65px;
+			float: left;
+		}
+		.high{
+			text-align: center;
+			width: 1200px;
+			line-height: 65px;
+			font-size: 30px;
+			padding: 70px 0;
+		}
+		.high span{
+			margin-left:  58px;
+		}

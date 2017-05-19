@@ -1,0 +1,85 @@
+
+.background{
+	width: 100%;
+	height: 100%;
+	background: #F0F0F0;
+}
+.head{
+	width: 100%;
+	height: 0.89rem;
+	background: #F7F7F8;
+	font-size: 0.4rem;
+	text-align: center;
+	line-height: 0.89rem;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+.main{
+	width: 100%;
+	overflow: hidden;
+	background: yellow;
+	margin-top: 0.35rem;
+}
+.login{
+	width: 100%;
+	height: 0.95rem;
+	padding: 0.28rem 2% ;
+	border-bottom: 0.01rem solid #909090;
+	background: white;
+}
+.font1{
+	width: 2rem;
+	font-size: 0.36rem;
+	text-align: left;
+	float: left;
+
+}
+ input{
+	width: 70%;
+	font-size: 0.36rem;
+	text-align: left;
+	float: right;
+	color: #ECECEC;
+	border: none;
+	outline: 0;
+}
+
+.button{
+	width: 94%;
+	height: 0.94rem;
+	margin: 0.3rem auto;
+	background: #C40000;
+	text-align: center;
+	font-size: 0.36rem;
+	line-height: 0.94rem;
+	border: 0.01rem solid #f40;
+}
+.regist{
+	width: 94%;
+	height: 0.38rem;
+	/* margin: 0.3rem 5% 0rem; */
+	margin: 0.3rem auto;
+	font-size: 0.36rem;
+	line-height: 0.38rem;
+}
+.button-font1{
+	font-size: 16px;
+	color: #C40000;
+	float: left;
+}
+.button-font2{
+	font-size: 16px;
+	float: right;
+	color: #C40000;
+}
+.fangshi{
+	width: 35%;
+	height: 0.65rem;
+	padding: 0.15rem;
+	margin: 0 auto;
+	font-size: 0.32rem;
+	color: #c40000;
+	text-align: center;
+	border: 0.01rem solid #f40;
+}
+

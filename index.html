@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的网站</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/myself-main.css">
+    <link rel="stylesheet" href="css/shangehua.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/set2.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/jq22.css">-->
+    <!--<script src="../../http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>-->
+    <link rel="stylesheet" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <style>
+        body{
+            width: 100%;
+            position: relative;
+        }
+        .banner-font{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 250px;
+            margin: auto;
+        }
+        .section{
+            width: 100%;
+            height: 100%;
+            padding-top: 45px;
+        }
+        .banner img{
+            width: 100%;
+            height: 100%;
+        }
+        .section1{
+            background-image: url("image/timg.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        #section2{
+            height: 100%;
+            width: 100%;
+            background-image: url("image/section2.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+        /*#section3{*/
+            /*height: 100%;*/
+            /*width: 100%;*/
+            /*background-image: url("image/bane.jpg");*/
+            /*background-size: 100% 100%;*/
+            /*background-repeat: no-repeat;*/
+            /*background-position: center center;*/
+
+        /*}*/
+        #section5{
+        height: 100%;
+        width: 100%;
+        background-image: url("image/bane.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        }
+        #section4{
+            height: 100%;
+            width: 100%;
+            background-image: url("image/serve.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+        .mask{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .show-head{
+            width: 1170px;
+            margin: 20px auto;
+            line-height: 25px;
+            text-align: center;
+        }
+        .show-head a{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #e0e0e0;
+            margin-right: 10px;
+            color: #fff;
+        }
+        .slide{
+            width: 100%;
+            float: left;
+        }
+    </style>
+    <script>    
+        $(function(){
+            $("#fullpage").fullpage({
+                afterLoad: function (an, index) {
+                    if (index == 2) { //索引值从1开始
+                        $(".my-img").animate({marginLeft: 0},500);
+                        $(".my-message").animate({marginRight: 0});
+                    }
+                },
+            //飞出去的动画
+                onLeave: function (index) {
+                    if (index == 2) { //索引值从1开始
+                        $(".my-img").animate({marginLeft: -500},500);
+                        $(".my-message").animate({marginRight: -300});
+                    }
+                }
+
+            });
+            var a=$(".show-head a");
+            var block=$(".show2");
+            a.click(function () {
+                var index=$(this).index();
+                a.filter(".active1").removeClass("active1").end().filter(this).addClass("active1");
+                block.filter(".active2").removeClass("active2").end().eq(index).addClass("active2");
+            });
+        })
+    </script>
+    <script src="js/index.js"></script>
+</head>
+<body>  
+    <!-- banner -->
+    <div id="fullpage" style="width: 100%">
+        <div class="section section1">
+            <div class="mask"></div>
+            <div class="container-fluid" style="height: 100%;">
+                <div class="banner" >
+                    <div class="myphoto"></div>
+                    <div class="myname">I'm Zhang Qi</div>
+                    <p>WEB　ＤEVELOPER</p>
+                    <div class="moreme" style="margin-top: 100px">了解更多</div>
+                    <div class="type-js headline">
+                        <h1 class="text-js">Hello,welcome to my world</h1>
+                    </div>
+                </div>
+                
+            </div>   
+        </div>
+        <div class="section" id="section2" >
+            <div class="mask"></div>
+            <div id="introduce" style="height: 100%">
+                <div class="container" >
+                    <div class="title">ABOUT ME</div>
+                    <div class="my-img">
+                        <img src="image/my.jpg" alt="">
+                    </div>
+                    <div class="my-message">
+                        <div>姓名:张奇</div>
+                        <div>毕业院校:山西财政税务专科学校</div>
+                        <div>专业：计算机应用技术</div>
+                        <div>擅长：精通计算机语言方面的知识</div>
+                        <div>喜欢去尝试各种有趣的东西，喜欢跟别人交谈</div>
+                        <p>1.熟练掌握ps：能把各类图片根据不同种类特质进行修改;
+                           <br>2.能熟练使用div+css;<br>3.个人独立能力强，有自学能力。
+                        </p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="section" id="section3">
+            <div class="mask"></div>
+            <div id="skills" style="width: 100%;height: 100%;">
+                <div class="container">
+                    <div class="title" style="text-align: center;">MY skills</div>
+                        <ul>
+                            <li class="myskill">
+                                <div class="skill-img"></div>
+
+                            </li>
+                            <li  class="myskill">
+                                <div class="skill-img img1"></div>
+
+                            </li>
+                            <li  class="myskill">
+                                <div class="skill-img img2"></div>
+
+                            </li>
+                            <li  class="myskill">
+                                <div class="skill-img img3"></div>
+
+                            </li>
+                            <li  class="myskill">
+                                <div class="skill-img img4"></div>
+
+                            </li>
+                            <li  class="myskill">
+                                <div class="skill-img img5"></div>
+
+                            </li>
+                        </ul>
+                        <div class=" col-md-6" style="background: black">
+
+                            <div class="progress_bar">
+                                <div class="pro-bar">
+                                    <small class="progress_bar_title">
+                                        HTML5
+                                        <span class="progress_number">%</span>
+                                    </small>
+                                    <span class="progress-bar-inner" style="background-color: #1abc9c; width: 89%;" data-value="89" data-percentage-value="89"></span>
+                                </div>
+                            </div>
+
+                            <div class="progress_bar">
+                                <div class="pro-bar">
+                                    <small class="progress_bar_title">
+                                        CSS3
+                                        <span class="progress_number">%</span>
+                                    </small>
+                                    <span class="progress-bar-inner" style="background-color: #fdba04; width: 75%;" data-value="75" data-percentage-value="75"></span>
+                                </div>
+                            </div>
+
+                            <div class="progress_bar">
+                                <div class="pro-bar">
+                                    <small class="progress_bar_title">
+                                        JavaScript
+                                        <span class="progress_number">%</span>
+                                    </small>
+                                    <span class="progress-bar-inner" style="background-color: #049dff; width: 65%;" data-value="65" data-percentage-value="65"></span>
+                                </div>
+                            </div>
+
+                            <div class="progress_bar">
+                                <div class="pro-bar">
+                                    <small class="progress_bar_title">
+                                        jQuery
+                                        <span class="progress_number">%</span>
+                                    </small>
+                                    <span class="progress-bar-inner" style="background-color: #ed687c; width: 95%;" data-value="95" data-percentage-value="95"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="media-body" style="width: 48%">
+                            <h4 class="media-heading">PC端</h4>
+                            <p>
+                                熟练使用 Html5 Css3 JavaScript，能够合理完成web端或者移动端页面的编写和维护，<br>
+                                熟练使用原生js, 了解js面向对象原理，闭包以及原型结构，能够合理利用面向对象以及模块化开发,并且能适当完成框架封装。熟练使用 jQuery，并能完成相关项目。
+                                <br>熟悉animation fullpage jquery-ui template lazyload jQeasing masonry等实用插件的应用,轮播图，tab栏，瀑布流，延迟加载，全屏滚动等等常用功能的实现
+                                <br>掌握 Ajax交互原理，根据后台接口能够合理完成前后台交互，数据的增删改查
+                            </p>
+                            <h4 class="media-heading">手机端</h4>
+                            <p>熟练使用zepto.js，Frozen ui，Amaze ui等移动框架进行移动页面的开发
+                                <br>掌握 移动端编程，会基于流式布局以及 响应式布局 开发基于移动端的页面。
+                                <br>熟练使用Bootstrap 框架以及轻量级框架 zepto 的使用。
+                            </p>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <div id="show" style="width: 100%;height: 100%;">
+                <div class="container" >
+                    <div class="title">MY WORKS</div>
+                    <div class="show-head">
+                       <a href="#" class="active1">All</a>
+                       <a href="#">网页</a>
+                       <a href="#">游戏</a>
+                    </div>
+                    <div class="slide">
+                        <div class="show1 show2 active2">
+                            <ul class="show-imgs">
+                                <li>
+                                    <a href="fanke/fanke.html" target="_blank">
+                                        <div class="yemian-img html1"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mi/xiaomi.html" target="_blank">
+                                        <div class="yemian-img html2"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="apple/apple.html" target="_blank">
+                                        <div class="yemian-img html3"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tmall/pcindex.html" target="_blank">
+                                        <div class="yemian-img html4"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tmallmobile/mobile.html" target="_blank">
+                                        <div class="yemian-img html5"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="youyike/index.html" target="_blank">
+                                        <div class="yemian-img html6"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="sofa/index.html" target="_blank">
+                                        <div class="yemian-img htm19"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="jingdong/index.html" target="_blank">
+                                        <div class="yemian-img htm17"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="show1 show2" >
+                            <ul class="show-imgs">
+                                <li>
+                                    <a href="fanke/fanke.html" target="_blank">
+                                        <div class="yemian-img html1"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mi/xiaomi.html" target="_blank">
+                                        <div class="yemian-img html2"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="apple/apple.html" target="_blank">
+                                        <div class="yemian-img html3"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tmall/pcindex.html" target="_blank">
+                                        <div class="yemian-img html4"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tmallmobile/mobile.html" target="_blank"> 
+                                        <div class="yemian-img html5"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="youyike/index.html" target="_blank">
+                                        <div class="yemian-img html6"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="sofa/index.html" target="_blank">
+                                        <div class="yemian-img htm19"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="jingdong/index.html" target="_blank">
+                                        <div class="yemian-img htm17"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="show1 show2" >
+                            <ul class="show-imgs">
+                                <li>
+                                    <a href="saolei/saolei.html" target="_blank">
+                                        <div class="yemian-img htm24"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="huihua/draw.html" target="_blank">
+                                        <div class="yemian-img htm22"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="todolist/note.html" target="_blank">
+                                        <div class="yemian-img htm21"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="dazigame/index.html" target="_blank">
+                                        <div class="yemian-img htm23"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="slide" style="margin-top: -150px;">
+                        <div class="show1">
+                            <ul class="show-imgs">    
+                                <li>
+                                    <a href="yidong/index.html" target="_blank">
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="education/index.html" target="_blank">
+                                        <div class="yemian-img htm20"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="saolei/saolei.html" target="_blank">
+                                        <div class="yemian-img htm24"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="huihua/draw.html" target="_blank">
+                                        <div class="yemian-img htm22"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="todolist/note.html" target="_blank">
+                                        <div class="yemian-img htm21"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="dazigame/index.html" target="_blank">
+                                        <div class="yemian-img htm23"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="yemian-img htm25"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="yemian-img htm26"></div>
+                                        <div class="zuoyezhanshi">
+                                            <p style="margin-top: 20px">凡客官网<br></p>
+                                            <span>动效包含：二级菜单，返回顶部，鼠标移入移出事件</span>
+                                            <div class="through">查看</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section5" >
+            <div class="mask"></div>
+            <footer id="foot" style="width: 100%;height: 100%;padding-top: 50px;">
+                <div class="container-fluid">
+                    <div class="title">Contact Me</div>         
+                    <div class="bottom-left">
+                        <div><span class="iconfont icon-dianhua"></span>：1157042898@qq.com</div>
+                        <div><span class="iconfont icon-jiatingzhuzhi"></span>:山西太原万柏林区</div>
+                        <div><span class="iconfont icon-svg17"></span>电话:1570412289</div>
+                    </div>
+                    <div class="bottom-right">
+                        <input type="text" placeholder="Name" style="height: 40px;">
+                        <input type="text" placeholder="E-mail" style="height: 40px;">
+                        <input type="text-area" placeholder="Message" style="height: 80px;">
+                        <input type="button" value="发送邮件" style="height: 30px; width: 10%;line-height: 30px;background: #22305b">
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+        
+    <!-- 头部 -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12" >
+                        <div class="head1"><a href=""  style="color: white">首页</a></div>
+                        <div class="head1"><a href="#section2" name="" style="color: white">个人介绍</a></div>
+                        <div class="head1"><a href="#section3" name="" style="color: white">个人技能</a></div>
+                        <div class="head1"><a href="#section4" name="" style="color: white">作品展示</a></div>
+                        <div class="head1"><a href="#section5" style="color: white">联系方式</a></div>  
+                    </div>
+                </div>     
+            </div>
+        </header>
+
+        
+</body>
+<script type="text/javascript">
+        $(function(){
+            var progress = $(".progress-bar-inner");
+            progress.each(function (i)
+            {
+                var data = $(this).attr('data-value');
+                $(this).prev().find("span").html(data+"%");
+            });
+        });
+        // For Demo purposes only (show hover effect on mobile devices)
+        [].slice.call( document.querySelectorAll('a[href="#"') ).forEach( function(el) {
+            el.addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+        } );
+</script>
+</html>

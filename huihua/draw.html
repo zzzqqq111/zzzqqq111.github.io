@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘图</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<style>
+    canvas{
+        background: lightskyblue;
+        display: block;
+        float: left;
+    }
+    .gongneng{
+        display: block;
+        width: 200px;
+        height: 480px;
+        float: left;
+        background: coral;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .gongneng input{
+        width: 50%;
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        margin: 10px auto;
+        float: left;
+    }
+    .gongneng ul{
+        padding: 0;
+    }
+    .gongneng ul li{
+        margin: 10px auto;
+        overflow: hidden;
+    }
+    .gongneng ul li span{
+        width: 40%;
+        text-align: center;
+        display: inline-block;
+        float: left;
+    }
+</style>
+<body>
+    <div class="gongneng">
+    <ul>
+        <li>
+            <span>形状</span>
+            <select name="" id="shape">
+                <option value="rect">矩形</option>
+                <option value="line">直线</option>
+                <option value="circle">外接圆</option>
+                <option value="circle1">内切圆</option>
+                <option value="circlecenter">中心圆</option>
+                <option value="poly">多边形</option>
+                <option value="pen">画笔</option>
+                <option value="erase">橡皮擦</option>
+            </select>
+        </li>
+        <li>
+            <span style="line-height: 50px;">边数</span>
+            <input type="number" class="bian" value="3" step="1" min="3" max="8">
+        </li>
+        <li style="line-height: 50px;">
+            <span>画笔颜色</span>
+            <input type="color" class="color">
+        </li>
+        <li>
+            <span style="line-height: 50px;">选择线宽</span>
+            <input type="number" class="width" value="2" step="2" min="2" max="20">
+        </li>
+        <li>
+            <span>选择方式</span>
+            <select name="" id="chose">
+                <option value="stroke">描边</option>
+                <option value="fill">填充</option>
+            </select>
+        </li>
+        <li>
+            <input type="button" value="撤销" id="return">
+        </li>
+        <li>
+            <input type="button" value="保存" id="save">
+        </li>
+        
+    </ul>
+</div>
+    <canvas width="500" height="500" ></canvas>
+</body>
+<script src="draw.js"></script>
+<script>
+    var canvas=document.querySelector("canvas");
+    var cobj=canvas.getContext("2d");
+    var shape=document.querySelector("#shape");
+    var color=document.querySelector(".color");
+    var width=document.querySelector(".width");
+    var bian=document.querySelector(".bian");
+    var fangshi=document.querySelector("#chose");
+    var side=document.querySelector("#side");
+    var redo=document.querySelector("#return");
+    console.log(redo);
+    var sava=document.querySelector("#save");
+    var bianshu=document.querySelector(".bian");
+    var s="rect";
+    shape.onchange=function () {
+        s=this.value;
+    }
+    var col="#000";
+    color.onchange=function () {
+        col=this.value;
+    }
+    var sty="stroke";
+    fangshi.onchange=function () {
+        sty=this.value;
+        console.log(sty)
+    }
+    var w="2";
+    width.onchange=function () {
+        w=this.value;
+    }
+    var b=3;
+    bianshu.onchange=function(){
+        b=this.value;
+    }
+    var data=[];
+    canvas.onmousedown=function (e) {
+        var ox=e.offsetX;//获取鼠标按下时的坐标离事件源的位置
+        var oy=e.offsetY;
+        var draw=new Draw(cobj,{color:col,width:w,style:sty});
+        if(s=="pen"){
+            cobj.beginPath();
+            cobj.moveTo(ox,oy);
+        }
+        canvas.onmousemove=function (e) {
+            var x=e.offsetX;
+            var y=e.offsetY;//获取鼠标在移动时的坐标离事件源的位置
+            cobj.clearRect(x,y,10,10);
+            if(s!="erase") {
+                cobj.clearRect(0, 0, 500, 500);
+                if (data.length!=0) {
+                    cobj.putImageData(data[data.length-1], 0, 0);//把数据放到画布中
+                }
+            }
+            draw[s](ox,oy,x,y,b);
+//            cobj.strokeRect(ox,oy,x-ox,y-oy);
+        }
+        document.onmouseup=function () {
+            data.push(cobj.getImageData(0,0,500,500));
+//            data=cobj.getImageData(0,0,500,500);//把画布中的数据保存
+            canvas.onmousemove=null;
+            document.onmouseup=null;
+        }
+
+    }
+//    撤销
+    redo.onclick=function () {
+        if(data.length==0){
+            return;
+        }
+        cobj.clearRect(0,0,500,500);
+        data.pop();
+        if(data.length==0){
+            return;
+        }
+        cobj.putImageData(data[data.length-1],0,0)
+    }
+//    保存
+    sava.onclick=function () {
+        var r=canvas.toDataURL();
+        location.href=r;
+    }
+
+</script>
+</html>

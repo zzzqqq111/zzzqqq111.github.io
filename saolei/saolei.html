@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container{
+        width: 700px;
+        height:500px;
+        margin: 0 auto;
+        position: relative;
+        background-image: url('img/banner.jpg');
+        background-repeat:no-repeat;
+        background-size: 100% 100%;
+        display: block;
+    }
+    .scene{
+        width: 500px;
+        height: 500px;
+        float: left;
+        /*border: 2px solid  #F23F4A;*/
+    }
+    .block{
+        width: 49px;
+        height: 49px;
+        background: #A57FBA;
+        float: left;
+        border-bottom: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+    }
+    .lei{
+        /*background: #fff;*/
+    }
+    .show{
+        background-image:url("img/lei.png") ;
+        background-size: 100% 100%;
+        background-position:  center center;
+        background-repeat: no-repeat;
+    }
+    .control{
+        width: 200px;
+        height: 100%;
+        float: right;
+        text-align: center;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    .num{
+        background: #7796ff;
+        line-height: 25px;
+        text-align: center;
+    }
+    .flag{
+        background-image:url("img/qizhi.png") ;
+        background-size: 100% 100%;
+        background-position:  center center;
+        background-repeat: no-repeat;
+    }
+    .time,.flagnum,.restart1,.rank{
+        width: 100px;
+        height: 30px;
+        border-radius: 20px;
+        margin: 0 auto;
+        background: #A882C1;
+        text-align: center;
+        line-height: 30px;
+        color: black;
+    }
+    .different{
+        width: 200px;
+        height: 50px;
+        background: pink;
+        margin: 5px auto;
+        line-height: 50px;
+        cursor: pointer;
+        margin-left: 150px;
+        text-align: center;
+    }
+    .mask,.mask2{
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: rgba(0,0,0,0.7);
+        color: #fff;
+        font-size: 30px;
+        display: none;
+    }
+    .mask div:nth-child(1){
+        margin-top: 200px;
+        text-align: center;
+    }
+    .button{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .restart,.back{
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        line-height: 50px;
+    }
+    .start{
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-image: url('img/banner.jpg');
+        background-repeat:no-repeat;
+        background-size: 100% 100%;
+        display: block;
+    }
+    .start input{
+        width: 200px;
+        height: 50px;
+        margin-left: 150px;
+        background: pink;
+        border: 0;
+        text-align: center;
+        font-size: 24px;
+        cursor: pointer;
+        line-height: 50px;
+    }
+    
+    .rank{
+        width: 100px;
+        height: 30px;
+        background: floralwhite;
+        margin: 20px auto;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .rank table{
+        background: orange;
+    }
+    .restart1{
+        margin-top: 100px;
+    }
+    .nanyi{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    .return img{
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    table{
+        width: 100%;
+        margin: 20px auto;
+        display: block;
+        font-size: 20px;
+        text-align: center;
+    }
+    tbody,thead{
+        display: inline-block;
+        width: 100%;
+    }
+    tr{
+        display: block;
+        width: 100%;
+    }
+    td{
+        display: inline-block;
+        width: 50%;
+        padding: 0;
+        float: left;
+    }
+</style>
+<script src="jquery.js"></script>
+<script src="js/yx.js"></script>
+<body>
+<div class="container">
+    <div class="start" >
+        <input type="button" value="开始游戏" style="margin-top: 180px;margin-bottom: 30px;" class="gamestart">
+        <input style="text-align: center;line-height: 50px;font-size: 22px;" value="难易程度" class="chengdu">
+        <div class="nanyi">
+            <div class="easy different" style="margin-top: 150px;">初级(10)</div>
+            <div class="middle different">中级(15)</div>
+            <div class="high different">高级(20)</div>
+            <div class="return">    
+                <img src="img/return.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="scene">
+    </div>
+    <div class="mask" >
+        <div>你踩雷了，下次努力吧</div>
+        <div class="button">
+            <button class="restart">重新开始</button>
+            <button class="back">返回</button>
+        </div>
+        <div class="usetime"></div>
+    </div>
+    <div class="control">
+        <div style="text-align: center;line-height: 50px;font-size: 22px;margin-top: 50px;">扫雷时间</div>
+        <div class="time">00:00</div>
+        <div style="text-align: center;line-height: 50px;font-size: 22px;">剩余雷:</div>
+        <div class="flagnum">&nbsp;&nbsp;&nbsp;&nbsp;10</div>
+        <div class="restart1">重新开始</div>
+        <div class="rank">排行榜</div>       
+    </div>
+    <div class="mask2">
+        <h5 style="text-align: center;">排行榜</h5>
+        <table>
+            <thead>
+                <tr>
+                    <td>姓名</td>
+                    <td>所用时间</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="return">    
+                <img src="img/return.png" alt="">
+            </div>
+    </div>
+</div>
+</body>
+</html>

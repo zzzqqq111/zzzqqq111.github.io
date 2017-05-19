@@ -1,0 +1,356 @@
+body,html{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen,.youxi{
+    width: 100%;
+    height: 100%;
+    /*background: red;*/
+    margin:0 auto;
+    position: relative;
+    z-index: 1;
+    background: url("../images/bg.png") no-repeat right bottom;
+}
+.youxi{
+    display: none;
+}
+.logo{
+    width: 710px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin: auto;
+    background: url("../images/logo.png") no-repeat center;
+}
+.botto{
+    width: 710px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 300px;
+    margin: auto;
+}
+.different{
+    width: 340px;
+    height: 100px;
+    float: left;
+    margin-top: 50px;
+    margin-right: 30px;
+    cursor: pointer;
+    background:url("../images/choose.png") no-repeat center;
+}
+.startgame{
+    width: 340px;
+    height: 100px;
+    float: left;
+    margin-top: 50px;
+    cursor: pointer;
+    background: url("../images/start.png") no-repeat center;
+}
+.startgame:hover{
+    transform: scale(1.1,1.1);
+}
+.different:hover{
+    transform: scale(1.1,1.1);
+}
+.position{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.start-box{
+    width: 100%;
+    height: 400px;
+    z-index: 9999;
+    transition: all .5s linear;
+    transform: translateX(-20px);
+}
+
+.ph-title{
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    background: yellow;
+}
+/*难易程度*/
+.different-choose{
+    width: 839px;
+    height: 402px;
+    background: url("../images/difficult.png") no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+}
+.choose-box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 93px;
+    margin-top: 200px;
+}
+.different-com{
+    width: 214px;
+    height: 93px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.different-com:hover{
+    transform: scale(1.1,1.1);
+}
+.easy{
+    background: url("../images/easy.png") no-repeat center;
+}
+.middle{
+    background: url("../images/medium.png") no-repeat center;
+}
+.height{
+    background: url("../images/hard.png") no-repeat center;
+}
+.return-choose{
+    width: 110px;
+    height: 110px;
+    background: url("../images/back.png") no-repeat center;
+    cursor: pointer;
+    transition: all .5s;
+    margin: 20px auto;
+}
+.return-choose:hover{
+    transform: rotate(360deg);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.zimu{
+    width: 130px;
+    height: 130px;
+    line-height: 100px;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    font-size: 36px;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.box{
+    width: 195px;
+    height: 65px;
+    display: inline-block;
+}
+.result{
+    width: 800px;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 10000;
+}
+.btn{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;;
+    text-align: center;
+    /*background: burlywood;*/
+    margin:10px auto;
+    cursor: pointer;
+}
+.rank{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    float: right;
+}
+.score,.guanka,.shenming{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-left: 75px;
+    margin-top: 25px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+.box1{
+    background-image: url("../images/scor.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.box2{
+    background-image: url("../images/scor.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.box3{
+    background-image: url("../images/life.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.tingzhi{
+    width: 65px;
+    height: 65px;
+    background-image: url("../images/stop.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-left: 100px
+}
+.yinyue{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #FEC743;
+    background:url("../images/music.png") no-repeat center;
+    border: 3px solid #ffffff;
+    position: absolute;
+    right: 120px;
+    top: 10px;
+}
+.yinyue img{
+    width: 100%;
+    height: 100%;
+}
+.ph-rank{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    z-index: 9999;
+    text-align: right;
+}
+.ph-rank p{
+    cursor: pointer;
+}
+.paihang{
+    width: 300px;
+    overflow: hidden;
+    background: lightblue;
+    color: #000;
+    text-align: center;
+    display: none;
+}
+tbody,thead{
+    width: 300px;
+}
+tbody tr{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+tbody tr td{
+    width: 150px;
+}
+.mask,.mask2{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+}
+.stopbox{
+    width: 470px;
+    height: 220px;
+    background: url("../images/stopbox.png");
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.continnue{
+    width: 93px;
+    height: 93px;
+    background: url("../images/continue.png");
+    margin-bottom: 30px;
+
+}
+.restart,.restart1{
+    display: inline-block;
+    width: 93px;
+    height: 93px;
+    background-image: url("../images/restart.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    margin-bottom: 30px;
+}
+.quit,.quit1{
+    display: inline-block;
+    width: 93px;
+    height: 93px;
+    background-image: url("../images/quit.png");
+    background-size: 100% 100%;
+    background-position: center center;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+.gameover{
+    width: 484px;
+    height: 419px;
+    background: url("../images/over.png") no-repeat center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+}
+.overscore{
+    width: 100px;
+    height: 40px;
+    font-size: 22px;
+    margin-left: 300px;
+    margin-top: 150px;
+    line-height: 40px;
+    color: #000;
+}
+.bestscore{
+    width: 100px;
+    height: 40px;
+    font-size: 22px;
+    margin-left: 300px;
+    margin-top: 5px;
+    color: #000;
+    line-height: 40px;
+}
+.btns{
+    width: 250px;
+    height: 93px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.btn{
+    transition: all 1s;
+}
+.btn:hover{
+    transform: rotate(180deg);
+}

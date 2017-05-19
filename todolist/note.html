@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .show{
+        width: 100%;
+        /*background: red;*/
+        flex-grow: 1;
+    }
+    .title{
+        width: 100%;
+        height: 100px;
+        background: palegreen;
+        font-size: 32px;
+        color: #000;
+    }
+    .con{
+        height: 30px;
+    }
+    #inputcon{
+        width: 300px;
+        height: 100%;
+        outline: 0;
+
+    }
+    #submit{
+        width: 60px;
+        height: 100%;
+        text-align: center;
+        line-height:30px;
+        font-size: 14px;
+    }
+    .plan{
+        float: left;
+        width: 50%;
+        background: yellow;
+        list-style: none;
+    }
+    .plan div,.done div{
+        background: lightblue;
+        text-align: center;
+        font-size: 16px;
+        height: 30px;
+        color: red;
+        line-height: 30px;
+    }
+    .plan li,.done li{
+        height: 30px;
+        font-size: 14px;
+        line-height: 30px;;
+    }
+    .done{
+        width: 50%;
+        float: left;
+        background: blueviolet;
+        list-style: none;
+    }
+</style>
+
+<body>
+    <div class="title">TOOD List</div>
+    <div class="con">
+        <input type="text" id="inputcon">
+        <input type="button" id="submit" value="提交">
+    </div>
+    <div class="show">
+        <ul class="plan">
+            <div>
+                未完成
+            </div>
+            <li>
+                <input type="checkbox">
+                <span>提交的内容</span>
+                <time style="float: right">2017-05-03  15:48</time>
+            </li>
+        </ul>
+        <ul class="done">
+            <div>
+                已完成
+            </div>
+            <li>
+                <input type="checkbox">
+                <span>提交的内容</span>
+                <time style="float: right">2017-05-03  15:48</time>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    var text=document.querySelector("#inputcon");
+    var tijiao=document.querySelector("#submit");
+    var plan=document.querySelector(".plan");
+    var done=document.querySelector(".done");
+    function getData() {
+        return localStorage.todo?JSON.parse(localStorage.todo):[];
+    }
+    function saveData(data) {
+        localStorage.todo=JSON.stringify(data);
+    }
+    function rewrite() {
+        var data=getData();//第一步获取数据
+        var str1="";
+        var str2="";
+        plan.innerHTML="<div>未完成</div>";
+        done.innerHTML="<div>已完成</div>";
+        data.forEach(function (v,i) {
+            if(!v.done){
+                str1+=`<li id="${i}"><input type="checkbox" onfocus="changestatus(this)" ><span contenteditable="true" onblur="changcontent(this)" class="changcon">${v.content}</span> <time style="float: right">${time(v.time)}</time></li>`;
+            }else{
+                str2+=`<li id="${i}"><input type="checkbox" onfocus="delet(this)"><span contenteditable="true">${v.content}</span> <time style="float: right">${time(v.time)}</time></li>`;
+            }
+        })
+
+        plan.innerHTML+=str1;
+        done.innerHTML+=str2;
+    }
+    rewrite();
+    function time(t) {
+        var date=new Date();
+        console.log(date);
+        date.setTime(t);
+        var year=date.getFullYear();
+        var month=addzero(date.getMonth()+1);
+        var day=addzero(date.getDate());
+        var hours=addzero(date.getHours());
+        var minutes=addzero(date.getMinutes());
+        var seconds=addzero(date.getSeconds());
+        console.log(date.setTime(t));
+        console.log(year);
+        console.log(date.getMonth());
+        return year+"/"+month+"/"+day+" "+hours+":"+minutes+":"+seconds;
+    }
+    function addzero(num) {
+        if(num<10){
+            return  "0"+num;
+        }else {
+            return num;
+        }
+    }
+    tijiao.onclick=function () {
+        if(text.value==""){
+            return;
+        }
+        var val=text.value;
+        text.value="";
+        var data=getData();
+        var date=new Date();
+        var time=date.getTime();
+        data.push({content:val,time,done:false});
+        saveData(data);
+        rewrite();
+    }
+    window.changestatus=function (ele) {
+        var id=ele.parentNode.id;
+        var data=getData();
+        data[id].done=true;
+        saveData(data);
+        rewrite();
+    }
+    window.delet=function (ele) {
+        var id=ele.parentNode.id;
+        var data=getData();
+        data.splice(id,1);
+        saveData(data);
+        rewrite();
+    }
+    window.changcontent=function (ele) {
+        var id=ele.parentNode.id;
+        var data=getData();
+        var key=ele.className;
+        var val=ele.innerHTML;
+        data[id].content=val;
+        saveData(data);
+        rewrite();
+    }
+</script>
+</html>

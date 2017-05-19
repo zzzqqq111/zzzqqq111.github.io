@@ -1,0 +1,90 @@
+/* 头部	*/
+    .header-title{ 
+		width: 100%;
+		height: 0.88rem;
+		background: #EEEEEE;
+		border-bottom: 1px solid #e1e1e1;
+		line-height: 0.88rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+	}
+	.title{
+		width: 23%;
+		height: 0.88rem;
+		text-align: center;
+		font-size: 14px;
+		line-height: 0.88rem;
+		float: left;
+
+	}
+/* 左边导航 */
+	.main{
+		width: 100%;
+        height: 667px;
+		overflow: hidden;
+		background: white;
+	}
+	.daohang{
+		width: 20%;
+        height: 667px;
+	    overflow: hidden;
+	    float: left;
+        overflow-y: scroll;
+        /* overflow: scroll; */
+	}
+	.daohang div{
+		width: 100%;
+		height: 1.2rem;
+		background: #EEEEEE;
+		border-bottom: 1px solid #e1e1e1;
+		font-size: 0.28rem;
+		line-height: 1.2rem;
+		text-align: center;
+	 }
+
+/* 右边部分 */
+    .content-left{
+                width: 80%;
+                height: 667px;
+                float: right;
+                padding: 0.2rem 4%;
+                overflow: scroll;
+                margin-top: 0.8rem;
+            }
+    .large-kaung{
+    	width: 100%;
+        height: 667px;
+        overflow-y: scroll;
+       /*  padding: 0.2rem 4%; */
+    }
+    .first{
+    	width: 100%;
+    	overflow: hidden;
+        margin-bottom: 0.02rem;
+    }
+    .first-title{
+    	width: 100%;
+    	overflow: hidden;
+    	font-size: 0.28rem;
+    	padding: 0.3rem 0;
+    }
+    .first ul li{
+        width: 33.33%;
+        height: 1.96562rem;
+        margin: 0.1rem 0rem;
+        float: left;
+    }
+    .first-img1 img{
+    	width: 76%;
+    	height: 1.34562rem;
+    	margin:  0 12% ;
+    	/* padding-top: 1.34562rem; */
+    }
+    .first-font{
+    	width: 100%;
+    	height: 0.46rem;
+    	font-size: 0.28rem;
+    	text-align: center;
+    }

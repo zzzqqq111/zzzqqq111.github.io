@@ -1,0 +1,70 @@
+/*
+* @Author: 小
+* @Date:   2017-04-16 15:43:27
+* @Last Modified by:   小
+* @Last Modified time: 2017-04-17 10:11:58
+*/
+.student-banner{
+	width: 100%;
+	height: 400px;
+}
+.student-banner img{
+	width: 100%;
+	height: 400px;
+}
+.youxiu-student{
+	width: 1200px;
+	margin: 60px auto 0;
+	overflow: hidden;
+}
+.youxiu-student li{
+	width: 333px;
+	height: 416px;
+	float: left;
+	margin-right: 100px;
+	font-size: 14px;
+	/* background: red; */
+	margin-bottom: 129px;
+	/* line-height: 30px; */
+}
+.s1{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	/* padding: 10px; */
+	border: 10px solid #f0f0f0;
+	background-color: #dbe4e7;
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+}
+.stu1{
+	width: 180px;
+	height: 180px;
+	background-image: url('../img/goodstudent_03.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1;
+}
+.stu2{
+	background-image: url('../img/goodstudent_06.png');
+}
+.stu3{
+	background-image: url('../img/goodstudent_08.png');
+}
+.stu4{
+	background-image: url('../img/goodstudent_14.png');
+}
+.stu5{
+	background-image: url('../img/goodstudent_16.png');
+}
+.stu6{
+	background-image: url('../img/goodstudent_19.png');
+}
